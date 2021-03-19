@@ -1,0 +1,577 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Blöki",
+      "gender": "male",
+      "age": 2,
+      "photo": "./assets/images/bloki.jpg",
+      "description": "Proin risus. Praesent lectus.",
+      "location": {
+        "id": 1,
+        "zip": 7202,
+        "city": "Stockholm",
+        "address": "981 Maryland Alley"
+      },
+      "interest": {
+        "id": 1,
+        "name": "vitae",
+        "description": "Integer ac leo. Pellentesque ultrices mattis odio."
+      }
+    },
+    {
+      "id": 2,
+      "name": "Csőrmester",
+      "gender": "male",
+      "age": 37,
+      "photo": "./assets/images/csormester.jpg",
+      "description": "Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
+      "location": {
+        "id": 2,
+        "zip": 9880,
+        "city": "Dunkerque",
+        "address": "35 Scott Street"
+      },
+      "interest": {
+        "id": 2,
+        "name": "tortor",
+        "description": "Duis aliquam convallis nunc."
+      }
+    },
+    {
+      "id": 3,
+      "name": "Dr. Bubó",
+      "gender": "male",
+      "age": 58,
+      "photo": "./assets/images/drbubo.jpg",
+      "description": "Sed ante. Vivamus tortor.",
+      "location": {
+        "id": 3,
+        "zip": 8537,
+        "city": "Starigrad",
+        "address": "3585 Lake View Place"
+      },
+      "interest": {
+        "id": 3,
+        "name": "non",
+        "description": "Donec ut mauris eget massa tempor convallis."
+      }
+    },
+    {
+      "id": 4,
+      "name": "Festéktüsszentő Hapci Benő",
+      "gender": "male",
+      "age": 1,
+      "photo": "./assets/images/festektusszento-hapci-beno.jpg",
+      "description": "Aliquam erat volutpat.",
+      "location": {
+        "id": 4,
+        "zip": 2636,
+        "city": "Stamáta",
+        "address": "182 Birchwood Place"
+      },
+      "interest": {
+        "id": 4,
+        "name": "pulvinar",
+        "description": "Vivamus in felis eu sapien cursus vestibulum."
+      }
+    },
+    {
+      "id": 5,
+      "name": "Frakk",
+      "gender": "male",
+      "age": 15,
+      "photo": "./assets/images/frakk.jpg",
+      "description": "Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+      "location": {
+        "id": 5,
+        "zip": 2560,
+        "city": "Sandgerði",
+        "address": "6586 Sullivan Alley"
+      },
+      "interest": {
+        "id": 5,
+        "name": "erat",
+        "description": "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst."
+      }
+    },
+    {
+      "id": 6,
+      "name": "Gombóc Artúr",
+      "gender": "male",
+      "age": 90,
+      "photo": "./assets/images/gomboc-artur.jpg",
+      "description": "Maecenas rhoncus aliquam lacus.",
+      "location": {
+        "id": 6,
+        "zip": 1741,
+        "city": "Xiyuan",
+        "address": "4 Bunker Hill Avenue"
+      },
+      "interest": {
+        "id": 6,
+        "name": "imperdiet",
+        "description": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus."
+      }
+    },
+    {
+      "id": 7,
+      "name": "Gusztáv",
+      "gender": "male",
+      "age": 22,
+      "photo": "./assets/images/gusztav.jpg",
+      "description": "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat.",
+      "location": {
+        "id": 7,
+        "zip": 6084,
+        "city": "Esso",
+        "address": "27917 Knutson Parkway"
+      },
+      "interest": {
+        "id": 7,
+        "name": "id",
+        "description": "Praesent lectus."
+      }
+    },
+    {
+      "id": 8,
+      "name": "Irma néni",
+      "gender": "female",
+      "age": 27,
+      "photo": "./assets/images/irma-neni.jpg",
+      "description": "Etiam justo.",
+      "location": {
+        "id": 8,
+        "zip": 1619,
+        "city": "Koh Kong",
+        "address": "1404 Kinsman Trail"
+      },
+      "interest": {
+        "id": 8,
+        "name": "condimentum",
+        "description": "In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem."
+      }
+    },
+    {
+      "id": 9,
+      "name": "Károly bácsi",
+      "gender": "male",
+      "age": 65,
+      "photo": "./assets/images/karoly-bacsi.jpg",
+      "description": "Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci.",
+      "location": {
+        "id": 9,
+        "zip": 8229,
+        "city": "Jiangya",
+        "address": "9 Sloan Trail"
+      },
+      "interest": {
+        "id": 9,
+        "name": "semper sapien",
+        "description": "Vivamus vel nulla eget eros elementum pellentesque."
+      }
+    },
+    {
+      "id": 10,
+      "name": "Kotkoda",
+      "gender": "female",
+      "age": 80,
+      "photo": "./assets/images/kotkoda.jpg",
+      "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam.",
+      "location": {
+        "id": 10,
+        "zip": 5206,
+        "city": "General Ramírez",
+        "address": "6 Becker Crossing"
+      },
+      "interest": {
+        "id": 10,
+        "name": "sapien",
+        "description": "Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum."
+      }
+    },
+    {
+      "id": 11,
+      "name": "Kukori",
+      "gender": "male",
+      "age": 74,
+      "photo": "./assets/images/kukori.jpg",
+      "description": "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo.",
+      "location": {
+        "id": 11,
+        "zip": 1028,
+        "city": "Zhoinda",
+        "address": "8 Judy Crossing"
+      },
+      "interest": {
+        "id": 11,
+        "name": "velit",
+        "description": "Maecenas tincidunt lacus at velit."
+      }
+    },
+    {
+      "id": 12,
+      "name": "Lukrécia",
+      "gender": "female",
+      "age": 60,
+      "photo": "./assets/images/lukrecia.jpg",
+      "description": "Nulla tempus.",
+      "location": {
+        "id": 12,
+        "zip": 1684,
+        "city": "Bangrat",
+        "address": "43 Gina Pass"
+      },
+      "interest": {
+        "id": 12,
+        "name": "at vulputate",
+        "description": "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum."
+      }
+    },
+    {
+      "id": 13,
+      "name": "Maffia",
+      "gender": "male",
+      "age": 100,
+      "photo": "./assets/images/maffia.jpg",
+      "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam.",
+      "location": {
+        "id": 13,
+        "zip": 7185,
+        "city": "Sơn Hà",
+        "address": "72103 Gulseth Junction"
+      },
+      "interest": {
+        "id": 13,
+        "name": "sapien",
+        "description": "Etiam vel augue."
+      }
+    },
+    {
+      "id": 14,
+      "name": "Máris szomszéd",
+      "gender": "male",
+      "age": 29,
+      "photo": "./assets/images/maris-szomszed.jpg",
+      "description": "Nulla tellus.",
+      "location": {
+        "id": 14,
+        "zip": 7478,
+        "city": "Star’",
+        "address": "74532 Coleman Park"
+      },
+      "interest": {
+        "id": 14,
+        "name": "turpis elementum",
+        "description": "In congue. Etiam justo."
+      }
+    },
+    {
+      "id": 15,
+      "name": "Mézga Aladár",
+      "gender": "male",
+      "age": 78,
+      "photo": "./assets/images/mezga-aladar.jpg",
+      "description": "Nulla mollis molestie lorem. Quisque ut erat.",
+      "location": {
+        "id": 15,
+        "zip": 5544,
+        "city": "Lapuz",
+        "address": "841 Carioca Court"
+      },
+      "interest": {
+        "id": 15,
+        "name": "vestibulum ante",
+        "description": "Nam nulla."
+      }
+    },
+    {
+      "id": 16,
+      "name": "Mérga Géza",
+      "gender": "male",
+      "age": 99,
+      "photo": "./assets/images/mezga-geza.jpg",
+      "description": "Proin interdum mauris non ligula pellentesque ultrices.",
+      "location": {
+        "id": 16,
+        "zip": 1257,
+        "city": "Kaum Kaler",
+        "address": "26906 Ryan Alley"
+      },
+      "interest": {
+        "id": 16,
+        "name": "tempor turpis",
+        "description": "Aliquam non mauris."
+      }
+    },
+    {
+      "id": 17,
+      "name": "Mézga Kriszta",
+      "gender": "female",
+      "age": 24,
+      "photo": "./assets/images/mezga-kriszta.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus.",
+      "location": {
+        "id": 17,
+        "zip": 7133,
+        "city": "Sainte-Agathe-des-Monts",
+        "address": "6 Caliangt Junction"
+      },
+      "interest": {
+        "id": 17,
+        "name": "erat vestibulum",
+        "description": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio."
+      }
+    },
+    {
+      "id": 18,
+      "name": "Mézga Paula",
+      "gender": "female",
+      "age": 50,
+      "photo": "./assets/images/mezga-paula.webp",
+      "description": "In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt.",
+      "location": {
+        "id": 18,
+        "zip": 4578,
+        "city": "Belovodskoye",
+        "address": "2414 Rutledge Hill"
+      },
+      "interest": {
+        "id": 18,
+        "name": "ornare",
+        "description": "Nunc nisl. Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa."
+      }
+    },
+    {
+      "id": 19,
+      "name": "MZ/X",
+      "gender": "male",
+      "age": 84,
+      "photo": "./assets/images/mz-x.jpg",
+      "description": "Aliquam erat volutpat. In congue.",
+      "location": {
+        "id": 19,
+        "zip": 2539,
+        "city": "Licupis",
+        "address": "34 American Ash Street"
+      },
+      "interest": {
+        "id": 19,
+        "name": "vivamus",
+        "description": "Integer ac neque. Duis bibendum."
+      }
+    },
+    {
+      "id": 20,
+      "name": "Picúr",
+      "gender": "female",
+      "age": 28,
+      "photo": "./assets/images/picur.jpg",
+      "description": "Cras pellentesque volutpat dui.",
+      "location": {
+        "id": 20,
+        "zip": 8927,
+        "city": "Huskvarna",
+        "address": "91008 Cherokee Point"
+      },
+      "interest": {
+        "id": 20,
+        "name": "tincidunt eu",
+        "description": "Integer non velit."
+      }
+    },
+    {
+      "id": 21,
+      "name": "Pom-pom",
+      "gender": "male",
+      "age": 27,
+      "photo": "./assets/images/pom-pom.jpg",
+      "description": "Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo.",
+      "location": {
+        "id": 21,
+        "zip": 8287,
+        "city": "Huancaray",
+        "address": "57 Melvin Road"
+      },
+      "interest": {
+        "id": 21,
+        "name": "non",
+        "description": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue."
+      }
+    },
+    {
+      "id": 22,
+      "name": "Radírpók",
+      "gender": "male",
+      "age": 55,
+      "photo": "./assets/images/radirpok.jpg",
+      "description": "Integer ac leo.",
+      "location": {
+        "id": 22,
+        "zip": 9425,
+        "city": "Lashkar Gāh",
+        "address": "47 Grim Plaza"
+      },
+      "interest": {
+        "id": 22,
+        "name": "quis",
+        "description": "Nullam sit amet turpis elementum ligula vehicula consequat."
+      }
+    },
+    {
+      "id": 23,
+      "name": "Szerénke",
+      "gender": "female",
+      "age": 67,
+      "photo": "./assets/images/szerenke.jpg",
+      "description": "Duis at velit eu est congue elementum. In hac habitasse platea dictumst.",
+      "location": {
+        "id": 23,
+        "zip": 7775,
+        "city": "Buđanovci",
+        "address": "16 Washington Place"
+      },
+      "interest": {
+        "id": 23,
+        "name": "sed tristique",
+        "description": "Proin at turpis a pede posuere nonummy. Integer non velit."
+      }
+    },
+    {
+      "id": 24,
+      "name": "Ursula",
+      "gender": "female",
+      "age": 42,
+      "photo": "./assets/images/ursula.jpg",
+      "description": "Donec posuere metus vitae ipsum. Aliquam non mauris.",
+      "location": {
+        "id": 24,
+        "zip": 9357,
+        "city": "Askainen",
+        "address": "44260 Vernon Plaza"
+      },
+      "interest": {
+        "id": 24,
+        "name": "tellus",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus."
+      }
+    },
+    {
+      "id": 25,
+      "name": "Mekk Elek",
+      "gender": "male",
+      "age": 5,
+      "description": "Two-left-handed handyman",
+      "photo": "./assets/images/mekk-elek.jpg",
+      "location": {
+        "id": 1,
+        "zip": 7202,
+        "city": "Kukutyin",
+        "address": "Mesterek utcája 5890."
+      },
+      "interest": {
+        "id": 1,
+        "name": "repair",
+        "description": "Integer ac leo.Pellentesque ultrices mattis odio."
+      }
+    }
+  ],
+  "connections": [
+    {
+      "id": 1,
+      "user1": 25,
+      "user2": 1,
+      "accepted": true
+    },
+    {
+      "id": 2,
+      "user1": 25,
+      "user2": 2,
+      "accepted": true
+    },
+    {
+      "id": 3,
+      "user1": 25,
+      "user2": 3,
+      "accepted": true
+    },
+    {
+      "id": 4,
+      "user1": 25,
+      "user2": 4,
+      "accepted": true
+    },
+    {
+      "id": 5,
+      "user1": 25,
+      "user2": 5,
+      "accepted": false
+    },
+    {
+      "id": 6,
+      "user1": 25,
+      "user2": 6,
+      "accepted": false
+    },
+    {
+      "id": 7,
+      "user1": 1,
+      "user2": 23,
+      "accepted": true
+    },
+    {
+      "id": 8,
+      "user1": 34,
+      "user2": 12,
+      "accepted": false
+    },
+    {
+      "id": 9,
+      "user1": 23,
+      "user2": 7,
+      "accepted": false
+    },
+    {
+      "id": 10,
+      "user1": 12,
+      "user2": 39,
+      "accepted": false
+    },
+    {
+      "id": 11,
+      "user1": 38,
+      "user2": 32,
+      "accepted": false
+    },
+    {
+      "id": 12,
+      "user1": 44,
+      "user2": 28,
+      "accepted": true
+    },
+    {
+      "id": 13,
+      "user1": 2,
+      "user2": 31,
+      "accepted": true
+    },
+    {
+      "id": 14,
+      "user1": 25,
+      "user2": 36,
+      "accepted": false
+    },
+    {
+      "id": 15,
+      "user1": 20,
+      "user2": 31,
+      "accepted": true
+    },
+    {
+      "id": 16,
+      "user1": 25,
+      "user2": 10,
+      "accepted": false
+    }
+  ]
+}

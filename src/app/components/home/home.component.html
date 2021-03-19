@@ -1,0 +1,51 @@
+<ion-grid>
+  <ion-row class="ion-justify-content-center">
+    <ion-col size-xl="5">
+
+      <div>
+        <ion-row></ion-row>
+      </div>
+
+      <ion-header >
+        <ion-toolbar>
+          <ion-row class="ion-justify-content-between">
+          <ion-button ion-button full size="large" (click)="changeAll()" type="submit">
+            <ion-icon *ngIf="all" name="people"></ion-icon>
+            <ion-label *ngIf="all">&nbsp;&nbsp;all users</ion-label>
+            <ion-icon *ngIf="!all" name="checkmark-done-outline"></ion-icon>
+            <ion-label *ngIf="!all">&nbsp;&nbsp;marked users</ion-label>
+          </ion-button>
+          <ion-col size="7">
+            <ion-searchbar [(ngModel)]="phrase" placeholder="Search..." animated></ion-searchbar>
+          </ion-col>
+
+        </ion-row>
+        </ion-toolbar>
+      </ion-header>
+
+
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-content fullscreen>
+  <div *ngIf="all">
+    <div *ngFor="let user of userList$ | async | filter:phrase" >
+      <app-profile-card *ngIf="markedArray.includes(user.id)" [user]="user" (mark)="markUser($event)" [connection]="true">
+      </app-profile-card>
+      <app-profile-card *ngIf="!markedArray.includes(user.id)" [user]="user" (mark)="markUser($event)" [connection]="false">
+      </app-profile-card>
+
+    </div>
+  </div>
+
+  <div *ngIf="!all">
+    <app-profile-card [user]="user" *ngFor="let user of userList$ | async | connect | filter:phrase"
+    [connection]="true"></app-profile-card>
+  </div>
+
+  <div class="space-bottom">
+    <ion-row></ion-row>
+  </div>
+
+</ion-content>

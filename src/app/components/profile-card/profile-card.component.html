@@ -1,0 +1,83 @@
+<ion-grid>
+  <ion-row class="ion-justify-content-center">
+    <ion-col size-xl="5">
+
+      <ng-container *ngIf="user">
+
+      <ion-card>
+      <ion-img [src]="user.photo" [alt]="user.photo"></ion-img>
+        <ion-card-header>
+          <ion-item color="primary">
+            <ion-icon name="person" slot="start"></ion-icon>
+            <ion-label>
+              <ion-card-title class="ion-text-center" color="light">{{user.name}}</ion-card-title>
+            </ion-label>
+          </ion-item>
+        </ion-card-header>
+
+        <ion-card-content>
+
+          <ion-item>
+            <ion-icon name="male-female-outline" slot="start"></ion-icon>
+            <ion-label>
+              <ion-label>{{user.gender}}</ion-label>
+            </ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-icon name="time" slot="start"></ion-icon>
+            <ion-label>{{user.age}} year(s)</ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-icon name="locate" slot="start"></ion-icon>
+            <ion-label>{{user.location.zip}} {{user.location.city}}, {{user.location.address}}</ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-icon name="information-circle" slot="start"></ion-icon>
+            <p>{{user.description}}</p>
+          </ion-item>
+
+          <ion-item>
+            <ion-icon name="accessibility-outline" slot="start"></ion-icon>
+            <ion-label>Interest:</ion-label>
+            <p>{{user.interest.name}}</p>
+          </ion-item>
+
+          <ion-item>
+            <ion-icon name="" slot="start"></ion-icon>
+            <ion-label>Interest description:</ion-label>
+            <p>{{user.interest.description}}</p>
+          </ion-item>
+
+          <!-- Normal Button -->
+          <!-- <ion-button>
+            Normal
+          </ion-button> -->
+          <!-- <ion-button expand="block" size="large" [routerLink]="'/tabs/tab3'" type="button" [id]="user.id">
+            <ion-icon name="create-outline"></ion-icon>
+          </ion-button> -->
+          <ion-button [disabled]="connection" expand="block" size="large"
+              (click)="onMark(user)" type="button">
+            <ion-icon name="checkmark-outline"></ion-icon>&nbsp;&nbsp;Mark
+          </ion-button>
+
+          <ion-button *ngIf="connection" expand="block" size="large" color="danger"
+              (click)="onDeleteConnection(user)" type="button">
+              <ion-icon name="arrow-back-outline"></ion-icon>
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+              &nbsp;&nbsp;Disconnect
+          </ion-button>
+
+
+
+        </ion-card-content>
+      </ion-card>
+
+    </ng-container>
+
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
