@@ -39,17 +39,18 @@
             <p>{{user.description}}</p>
           </ion-item>
 
-          <ion-item>
-            <ion-icon name="accessibility-outline" slot="start"></ion-icon>
-            <ion-label>Interest:</ion-label>
-            <p>{{user.interest.name}}</p>
-          </ion-item>
-
-          <ion-item>
-            <ion-icon name="" slot="start"></ion-icon>
-            <ion-label>Interest description:</ion-label>
-            <p>{{user.interest.description}}</p>
-          </ion-item>
+          <div *ngFor="let interest of user.interests">
+            <ion-item>
+              <ion-icon name="accessibility-outline" slot="start"></ion-icon>
+              <ion-label>Interest:</ion-label>
+              <p>{{interest.name}}</p>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="" slot="start"></ion-icon>
+              <ion-label>Interest description:</ion-label>
+              <p>{{interest.description}}</p>
+            </ion-item>
+          </div>
 
           <!-- Normal Button -->
           <!-- <ion-button>

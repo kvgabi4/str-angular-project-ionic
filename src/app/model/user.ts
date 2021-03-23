@@ -14,9 +14,9 @@ export class User {
     city: '',
     address: '',
   };
-  interest: Interest = {
+  interests: Interest[] = [{
     id: 0,
     name: '',
     description: '',
-  }
+  }]
 }

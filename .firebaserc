@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ionic-project-28a5a": {
+      "hosting": {
+        "app": [
+          "ionic-project-28a5a"
+        ]
+      }
+    }
+  }
+}

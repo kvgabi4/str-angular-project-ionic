@@ -26,7 +26,7 @@ export class ProfileCardComponent implements OnInit {
     this.marked = !this.marked
   }
 
-  onDeleteConnection(user): void {
+  onDeleteConnection(user: User): void {
     this.unconnect.emit(user);
   }
 

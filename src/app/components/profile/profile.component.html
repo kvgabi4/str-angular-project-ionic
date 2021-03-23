@@ -1,112 +1,138 @@
 <ion-content>
-  <ion-item expand="block" size="large" color="primary">
-    <h1 class="ion-text-center">Edit your profile</h1>
-  </ion-item>
-  <div *ngIf="(user$ | async) as user">
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size-xl="5">
 
-  <form #userForm="ngForm" (ngSubmit)="onUpdate(userForm, user)">
+        <ion-item class="ion-margin-bottom" expand="block" size="large" color="primary">
+          <h1 class="ion-text-center">Edit your profile</h1>
+        </ion-item>
 
-    <!-- <ion-item>
+        <div *ngIf="(user$ | async) as user">
+          <form #userForm="ngForm" (ngSubmit)="onUpdate(userForm, user)">
+
+            <!-- <ion-item>
       <ion-label color="primary" for="">ID</ion-label>
       <ion-input name="id" [(ngModel)]="user.id" type="number" ngControl="id"
         required disabled="true"></ion-input>
     </ion-item> -->
 
-    <ion-item>
-      <ion-label color="primary">
-        <h1>Name</h1>
-      </ion-label>
-      <ion-input inputmode="text" name="name" [(ngModel)]="user.name"
-        pattern="^[A-ZÁÉÍÓÖŐÚÜŰ]{1}[A-ZÁÉÍÓÖŐÚÜŰa-záéíóöőúüű\s-]{1,}" required></ion-input>
-      <ion-text color="danger" [hidden]="userForm.controls.name?.valid" class="error-message mt-1">
-        The name must begin with capital letter.
-      </ion-text>
-    </ion-item>
+            <ion-item>
+              <ion-label color="primary">Photo&nbsp;&nbsp;</ion-label>
+              <ion-img [src]="user.photo" [alt]="user.photo"></ion-img>
+            </ion-item>
+            <ion-item>
+              <ion-label color="primary"></ion-label>
+              <ion-input class="ion-text-center" inputmode="text" name="photo" [(ngModel)]="user.photo"></ion-input>
+            </ion-item>
 
-    <ion-item>
-      <ion-label color="primary">Photo&nbsp;&nbsp;</ion-label>
-      <ion-thumbnail>
-        <ion-img [src]="user.photo" [alt]="user.photo"></ion-img>
-      </ion-thumbnail>
-      <ion-input inputmode="text" name="photo" [(ngModel)]="user.photo"></ion-input>
-    </ion-item>
+            <ion-col *ngFor="let photo of photoService.photos; index as position">
+              <ion-img class="ion-margin" [src]="photo.webviewPath"></ion-img>
+              {{photo.webviewPath}}
+            </ion-col>
 
-    <ion-item>
-      <ion-label color="primary" for="">Gender</ion-label>
-      <ion-input inputmode="text" name="gender" [(ngModel)]="user.gender"
-      pattern="^(male)$|^(female)$"required></ion-input>
+            <ion-content>
 
-      <ion-text color="danger" [hidden]="userForm.controls.gender?.valid" class="error-message mt-1">
-        The gender can be 'male' or 'female'.
-      </ion-text>
-    </ion-item>
+              <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+                <ion-fab-button (click)="addPhotoToGallery()">
+                  <ion-icon name="camera"></ion-icon>
+                </ion-fab-button>
+              </ion-fab>
+            </ion-content>
 
-    <ion-item>
-      <ion-label color="primary" for="age">Age</ion-label>
-      <ion-input name="age" [(ngModel)]="user.age" type="number" pattern="^[1-9][0-9]*$" required></ion-input>
-      <ion-text color="danger" [hidden]="userForm.controls.age?.valid" class="error-message mt-1">
-        The age must be a positive integer.
-      </ion-text>
-    </ion-item>
+            <ion-item>
+              <ion-label class="ion-margin-vertical" color="primary">
+                <h1>Name</h1>
+              </ion-label>
+              <ion-input inputmode="text" name="name" [(ngModel)]="user.name"
+                pattern="^[A-ZÁÉÍÓÖŐÚÜŰ]{1}[A-ZÁÉÍÓÖŐÚÜŰa-záéíóöőúüű\s-]{1,}" required></ion-input>
+              <ion-text color="danger" [hidden]="userForm.controls.name?.valid" class="error-message mt-1">
+                The name must begin with capital letter.
+              </ion-text>
+            </ion-item>
 
-    <ion-item>
-      <ion-label color="primary" for="">Description</ion-label>
-      <ion-input inputmode="text" name="description" [(ngModel)]="user.description"
-      pattern="^.{3,100}$" required></ion-input>
-      <ion-text color="danger" [hidden]="userForm.controls.description?.valid" class="error-message mt-1">
-        The description must minimum 3 maximum 100 characters long.
-      </ion-text>
-    </ion-item>
+            <ion-item>
+              <ion-label color="primary" for="">Gender</ion-label>
+              <ion-input inputmode="text" name="gender" [(ngModel)]="user.gender" pattern="^(male)$|^(female)$"
+                required>
+              </ion-input>
 
-    <ion-item>
-      <ion-label color="primary" for="">Zip</ion-label>
-      <ion-input name="zip" [(ngModel)]="user.location.zip" type="number" ngControl="zip" class="form-control"
-        pattern="^[1-9][0-9]{3}$" required></ion-input>
-      <ion-text color="danger" [hidden]="userForm.controls.zip?.valid" class="error-message mt-1">
-        The zip must be a 4-digit number.
-      </ion-text>
-    </ion-item>
+              <ion-text color="danger" [hidden]="userForm.controls.gender?.valid" class="error-message mt-1">
+                The gender can be 'male' or 'female'.
+              </ion-text>
+            </ion-item>
 
-    <ion-item>
-      <ion-label color="primary" for="">City</ion-label>
-      <ion-input inputmode="text" name="city" [(ngModel)]="user.location.city"
-      pattern="^[A-ZÁÉÍÓÖŐÚÜŰ]{1}.+" required></ion-input>
-      <ion-text color="danger" [hidden]="userForm.controls.city?.valid" class="error-message mt-1">
-        The city must begin with capital letter.
-      </ion-text>
-    </ion-item>
+            <ion-item>
+              <ion-label color="primary" for="age">Age</ion-label>
+              <ion-input name="age" [(ngModel)]="user.age" type="number" pattern="^[1-9][0-9]*$" required></ion-input>
+              <ion-text color="danger" [hidden]="userForm.controls.age?.valid" class="error-message mt-1">
+                The age must be a positive integer.
+              </ion-text>
+            </ion-item>
 
-    <ion-item>
-      <ion-label color="primary" for="">Address</ion-label>
-      <ion-input inputmode="text" name="address" [(ngModel)]="user.location.address"
-      pattern="^[A-ZÁÉÍÓÖŐÚÜŰ]{1}.+" required></ion-input>
-      <ion-text color="danger" [hidden]="userForm.controls.address?.valid" class="error-message mt-1">
-        The address must begin with capital letter.
-      </ion-text>
-    </ion-item>
+            <ion-item>
+              <ion-label color="primary" for="">Description</ion-label>
+              <ion-input inputmode="text" name="description" [(ngModel)]="user.description" pattern="^.{3,100}$"
+                required>
+              </ion-input>
+              <ion-text color="danger" [hidden]="userForm.controls.description?.valid" class="error-message mt-1">
+                The description must minimum 3 maximum 100 characters long.
+              </ion-text>
+            </ion-item>
 
-    <ion-item>
-      <ion-label color="primary" for="">Interest</ion-label>
-      <ion-input inputmode="text" name="interest.name" [(ngModel)]="user.interest.name"
-      pattern="^.{3,20}$" required></ion-input>
-      <ion-text color="danger" [hidden]="userForm.controls.name?.valid" class="error-message mt-1">
-        The interest can be minimum 3 maximum 20 characters long.
-      </ion-text>
-    </ion-item>
+            <ion-item>
+              <ion-label color="primary" for="">Zip</ion-label>
+              <ion-input name="zip" [(ngModel)]="user.location.zip" type="number" ngControl="zip" class="form-control"
+                pattern="^[1-9][0-9]{3}$" required></ion-input>
+              <ion-text color="danger" [hidden]="userForm.controls.zip?.valid" class="error-message mt-1">
+                The zip must be a 4-digit number.
+              </ion-text>
+            </ion-item>
 
-    <ion-item>
-      <ion-label color="primary" for="">Interest description</ion-label>
-      <ion-input inputmode="text" name="interest.description" [(ngModel)]="user.interest.description"
-      pattern="^.{3,300}$" required></ion-input>
-      <ion-text color="danger" [hidden]="userForm.controls.description?.valid" class="error-message mt-1">
-        The interest description minimum 3 maximum 100 characters long.
-      </ion-text>
-    </ion-item>
+            <ion-item>
+              <ion-label color="primary" for="">City</ion-label>
+              <ion-input inputmode="text" name="city" [(ngModel)]="user.location.city" pattern="^[A-ZÁÉÍÓÖŐÚÜŰ]{1}.+"
+                required></ion-input>
+              <ion-text color="danger" [hidden]="userForm.controls.city?.valid" class="error-message mt-1">
+                The city must begin with capital letter.
+              </ion-text>
+            </ion-item>
 
-    <ion-button expand="block" size="large" [disabled]="!userForm.valid" type="submit">
-      <ion-icon name="save-outline"></ion-icon>
-    </ion-button>
-  </form>
+            <ion-item>
+              <ion-label color="primary" for="">Address</ion-label>
+              <ion-input inputmode="text" name="address" [(ngModel)]="user.location.address"
+                pattern="^[A-ZÁÉÍÓÖŐÚÜŰ]{1}.+" required></ion-input>
+              <ion-text color="danger" [hidden]="userForm.controls.address?.valid" class="error-message mt-1">
+                The address must begin with capital letter.
+              </ion-text>
+            </ion-item>
 
-</div>
+            <div *ngFor="let interest of user.interests">
+              <ion-item>
+                <ion-label color="primary" for="">Interest</ion-label>
+                <ion-input inputmode="text" name="interest.name" [(ngModel)]="interest.name" pattern="^.{3,20}$"
+                  required>
+                </ion-input>
+                <ion-text color="danger" [hidden]="userForm.controls.name?.valid" class="error-message mt-1">
+                  The interest can be minimum 3 maximum 20 characters long.
+                </ion-text>
+              </ion-item>
+              <ion-item>
+                <ion-label color="primary" for="">Interest description</ion-label>
+                <ion-input inputmode="text" name="interest.description" [(ngModel)]="interest.description"
+                  pattern="^.{3,300}$" required></ion-input>
+                <ion-text color="danger" [hidden]="userForm.controls.description?.valid" class="error-message mt-1">
+                  The interest description minimum 3 maximum 100 characters long.
+                </ion-text>
+              </ion-item>
+            </div>
+
+            <ion-button expand="block" size="large" [disabled]="!userForm.valid" type="submit">
+              <ion-icon name="save-outline"></ion-icon>
+            </ion-button>
+          </form>
+
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

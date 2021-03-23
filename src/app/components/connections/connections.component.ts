@@ -15,6 +15,8 @@ import { UserService } from 'src/app/service/user.service';
 export class ConnectionsComponent implements OnInit {
 
   userList$: BehaviorSubject<User[]> = this.userService.userList$;
+  // userList$: Observable<any> = this.userService.all;
+
   connectionList$: BehaviorSubject<Connection[]> = this.connectionService.connectionList$;
 
   connections: Observable<Connection[]> = new Observable<Connection[]>();

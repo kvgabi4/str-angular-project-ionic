@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { AngularFirestoreCollection, AngularFirestore } from '@angular/fire/firestore';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { User } from '../model/user';
@@ -8,6 +9,42 @@ import { User } from '../model/user';
   providedIn: 'root'
 })
 export class UserService {
+
+
+  // all: Observable<any>;
+  // itemsCollection: AngularFirestoreCollection<any>;
+
+  // constructor(
+  //   private firestore: AngularFirestore
+  // ) {
+  //   this.itemsCollection = this.firestore.collection('users')
+  //   this.all = this.itemsCollection.valueChanges({
+  //     idField: 'docID'
+  //   })
+  // }
+
+  // get(id: number): Observable<any> {
+  //   return this.itemsCollection.doc(id.toString()).valueChanges({
+  //     idField: 'id'
+  //   });
+  // }
+
+
+  // create(doc: any): Promise<any> {
+  //   return this.itemsCollection.add({...doc});
+  // }
+
+  // update(doc: any): Promise<any> {
+  //   const id = doc.docID;
+  //   delete doc.docID;
+  //   return this.itemsCollection.doc(id).update({...doc});
+  // }
+
+  // delete(doc: any): Promise<any> {
+  //   return this.itemsCollection.doc(doc.docID).delete();
+  // }
+
+
 
   apiUrl: string = 'http://localhost:3000/users'
 
@@ -45,9 +82,9 @@ export class UserService {
     )
   };
 
-  // remove(user: User): void {
-  //   this.http.delete(`${this.apiUrl}/${user.id}`
-  //   ).subscribe(() => this.getAll());
-  // };
+  remove(user: User): void {
+    this.http.delete(`${this.apiUrl}/${user.id}`
+    ).subscribe(() => this.getAll());
+  };
 
 }

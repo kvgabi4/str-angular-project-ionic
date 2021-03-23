@@ -10,25 +10,25 @@ import { ConnectionService } from '../service/connection.service';
 export class ConnectPipe implements PipeTransform {
 
   connections: Observable<Connection[]> = new Observable<Connection[]>();
-  ownId: number = 25;
+  // ownId: number = 25;
   userArray: any[] = [];
 
   constructor(private connectionService: ConnectionService,) { }
 
 
-  transform(value: User[] | null, all: boolean = true): User[] | null {
+  transform(value: User[] | null, accepted: boolean = false, ownId: number): User[] | null {
 
-    if (!Array.isArray(value)) {
+    if (!Array.isArray(value) || !ownId) {
       return value
     }
-    this.connections = this.connectionService.getById(this.ownId)
+    this.connections = this.connectionService.getById(ownId)
 
     let i = 0;
 
-    if (all) {
+    if (!accepted) {
       this.connections.subscribe(
         element => element.forEach(e => {
-          if (e.user1 === this.ownId) {
+          if (e.user1 === ownId) {
             this.userArray[i]=(value.find(u => u.id === e.user2))
             i += 1;
           }
@@ -37,7 +37,7 @@ export class ConnectPipe implements PipeTransform {
 
       this.connections.subscribe(
         element => element.forEach(e => {
-          if (e.user1 === this.ownId && e.accepted) {
+          if (e.user1 === ownId && e.accepted) {
             this.userArray[i]=(value.find(u => u.id === e.user2))
             i += 1;
           }

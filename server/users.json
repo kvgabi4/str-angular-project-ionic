@@ -13,11 +13,16 @@
         "city": "Stockholm",
         "address": "981 Maryland Alley"
       },
-      "interest": {
+      "interests": [{
         "id": 1,
         "name": "vitae",
         "description": "Integer ac leo. Pellentesque ultrices mattis odio."
-      }
+      },
+      {
+        "id": 2,
+        "name": "sama",
+        "description": "Aliquam sit amet diam."
+      }]
     },
     {
       "id": 2,
@@ -32,11 +37,11 @@
         "city": "Dunkerque",
         "address": "35 Scott Street"
       },
-      "interest": {
+      "interests": [{
         "id": 2,
         "name": "tortor",
         "description": "Duis aliquam convallis nunc."
-      }
+      }]
     },
     {
       "id": 3,
@@ -51,11 +56,11 @@
         "city": "Starigrad",
         "address": "3585 Lake View Place"
       },
-      "interest": {
+      "interests": [{
         "id": 3,
         "name": "non",
         "description": "Donec ut mauris eget massa tempor convallis."
-      }
+      }]
     },
     {
       "id": 4,
@@ -70,11 +75,16 @@
         "city": "Stamáta",
         "address": "182 Birchwood Place"
       },
-      "interest": {
+      "interests": [{
         "id": 4,
         "name": "pulvinar",
         "description": "Vivamus in felis eu sapien cursus vestibulum."
-      }
+      },
+      {
+        "id": 5,
+        "name": "idion",
+        "description": "Praesent lectus. Kapien tursus kanate."
+      }]
     },
     {
       "id": 5,
@@ -89,11 +99,16 @@
         "city": "Sandgerði",
         "address": "6586 Sullivan Alley"
       },
-      "interest": {
+      "interests": [{
         "id": 5,
         "name": "erat",
         "description": "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst."
-      }
+      },
+      {
+        "id": 6,
+        "name": "eat",
+        "description": "Kanae kuta terra versus."
+      }]
     },
     {
       "id": 6,
@@ -108,11 +123,16 @@
         "city": "Xiyuan",
         "address": "4 Bunker Hill Avenue"
       },
-      "interest": {
+      "interests": [{
         "id": 6,
         "name": "imperdiet",
         "description": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus."
-      }
+      },
+      {
+        "id": 7,
+        "name": "eating",
+        "description": "Eating chocolate."
+      }]
     },
     {
       "id": 7,
@@ -127,11 +147,11 @@
         "city": "Esso",
         "address": "27917 Knutson Parkway"
       },
-      "interest": {
+      "interests": [{
         "id": 7,
-        "name": "id",
+        "name": "idion",
         "description": "Praesent lectus."
-      }
+      }]
     },
     {
       "id": 8,
@@ -146,11 +166,11 @@
         "city": "Koh Kong",
         "address": "1404 Kinsman Trail"
       },
-      "interest": {
+      "interests": [{
         "id": 8,
         "name": "condimentum",
         "description": "In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem."
-      }
+      }]
     },
     {
       "id": 9,
@@ -165,11 +185,11 @@
         "city": "Jiangya",
         "address": "9 Sloan Trail"
       },
-      "interest": {
+      "interests": [{
         "id": 9,
         "name": "semper sapien",
         "description": "Vivamus vel nulla eget eros elementum pellentesque."
-      }
+      }]
     },
     {
       "id": 10,
@@ -184,11 +204,11 @@
         "city": "General Ramírez",
         "address": "6 Becker Crossing"
       },
-      "interest": {
+      "interests": [{
         "id": 10,
         "name": "sapien",
         "description": "Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum."
-      }
+      }]
     },
     {
       "id": 11,
@@ -203,11 +223,11 @@
         "city": "Zhoinda",
         "address": "8 Judy Crossing"
       },
-      "interest": {
+      "interests": [{
         "id": 11,
         "name": "velit",
         "description": "Maecenas tincidunt lacus at velit."
-      }
+      }]
     },
     {
       "id": 12,
@@ -222,11 +242,11 @@
         "city": "Bangrat",
         "address": "43 Gina Pass"
       },
-      "interest": {
+      "interests": [{
         "id": 12,
         "name": "at vulputate",
         "description": "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum."
-      }
+      }]
     },
     {
       "id": 13,
@@ -241,11 +261,11 @@
         "city": "Sơn Hà",
         "address": "72103 Gulseth Junction"
       },
-      "interest": {
+      "interests": [{
         "id": 13,
         "name": "sapien",
         "description": "Etiam vel augue."
-      }
+      }]
     },
     {
       "id": 14,
@@ -260,11 +280,11 @@
         "city": "Star’",
         "address": "74532 Coleman Park"
       },
-      "interest": {
+      "interests": [{
         "id": 14,
         "name": "turpis elementum",
         "description": "In congue. Etiam justo."
-      }
+      }]
     },
     {
       "id": 15,
@@ -279,11 +299,11 @@
         "city": "Lapuz",
         "address": "841 Carioca Court"
       },
-      "interest": {
+      "interests": [{
         "id": 15,
         "name": "vestibulum ante",
         "description": "Nam nulla."
-      }
+      }]
     },
     {
       "id": 16,
@@ -298,11 +318,11 @@
         "city": "Kaum Kaler",
         "address": "26906 Ryan Alley"
       },
-      "interest": {
+      "interests": [{
         "id": 16,
         "name": "tempor turpis",
         "description": "Aliquam non mauris."
-      }
+      }]
     },
     {
       "id": 17,
@@ -317,11 +337,11 @@
         "city": "Sainte-Agathe-des-Monts",
         "address": "6 Caliangt Junction"
       },
-      "interest": {
+      "interests": [{
         "id": 17,
         "name": "erat vestibulum",
         "description": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio."
-      }
+      }]
     },
     {
       "id": 18,
@@ -336,11 +356,11 @@
         "city": "Belovodskoye",
         "address": "2414 Rutledge Hill"
       },
-      "interest": {
+      "interests": [{
         "id": 18,
         "name": "ornare",
         "description": "Nunc nisl. Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa."
-      }
+      }]
     },
     {
       "id": 19,
@@ -355,11 +375,11 @@
         "city": "Licupis",
         "address": "34 American Ash Street"
       },
-      "interest": {
+      "interests": [{
         "id": 19,
         "name": "vivamus",
         "description": "Integer ac neque. Duis bibendum."
-      }
+      }]
     },
     {
       "id": 20,
@@ -374,11 +394,11 @@
         "city": "Huskvarna",
         "address": "91008 Cherokee Point"
       },
-      "interest": {
+      "interests": [{
         "id": 20,
         "name": "tincidunt eu",
         "description": "Integer non velit."
-      }
+      }]
     },
     {
       "id": 21,
@@ -393,11 +413,11 @@
         "city": "Huancaray",
         "address": "57 Melvin Road"
       },
-      "interest": {
+      "interests": [{
         "id": 21,
         "name": "non",
         "description": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue."
-      }
+      }]
     },
     {
       "id": 22,
@@ -412,11 +432,11 @@
         "city": "Lashkar Gāh",
         "address": "47 Grim Plaza"
       },
-      "interest": {
+      "interests": [{
         "id": 22,
         "name": "quis",
         "description": "Nullam sit amet turpis elementum ligula vehicula consequat."
-      }
+      }]
     },
     {
       "id": 23,
@@ -431,11 +451,11 @@
         "city": "Buđanovci",
         "address": "16 Washington Place"
       },
-      "interest": {
+      "interests": [{
         "id": 23,
         "name": "sed tristique",
         "description": "Proin at turpis a pede posuere nonummy. Integer non velit."
-      }
+      }]
     },
     {
       "id": 24,
@@ -450,11 +470,16 @@
         "city": "Askainen",
         "address": "44260 Vernon Plaza"
       },
-      "interest": {
+      "interests": [{
         "id": 24,
+        "name": "tristique",
+        "description": "Tonsectetuer iscing elit. Koin ritus."
+      },
+      {
+        "id": 25,
         "name": "tellus",
         "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus."
-      }
+      }]
     },
     {
       "id": 25,
@@ -469,11 +494,16 @@
         "city": "Kukutyin",
         "address": "Mesterek utcája 5890."
       },
-      "interest": {
+      "interests": [{
         "id": 1,
         "name": "repair",
         "description": "Integer ac leo.Pellentesque ultrices mattis odio."
-      }
+      },
+      {
+        "id": 2,
+        "name": "speak",
+        "description": "Lorem ipsum dolor sit amet."
+      }]
     }
   ],
   "connections": [
@@ -493,12 +523,6 @@
       "id": 3,
       "user1": 25,
       "user2": 3,
-      "accepted": true
-    },
-    {
-      "id": 4,
-      "user1": 25,
-      "user2": 4,
       "accepted": true
     },
     {
@@ -572,6 +596,12 @@
       "user1": 25,
       "user2": 10,
       "accepted": false
+    },
+    {
+      "id": 17,
+      "user1": 25,
+      "user2": 4,
+      "accepted": true
     }
   ]
 }
